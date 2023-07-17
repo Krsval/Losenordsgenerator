@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="icon" sizes="32x32" href="./assets/images/techover.ico" />
+    <link rel="stylesheet" href="style.css">
+
+    <!--Google Font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech&display=swap" rel="stylesheet">
+
+    <title>Lösenords Generator</title>
+  </head>
+  <body>
+
+
+    <h1 class="title">Password Generator</h1>
+
+    <section class="result-container">
+      <div id="result"></div>
+      <button id="copy" src="images/copy-icon.svg">
+        <img src="images/copy-icon.svg" alt="copy"></img>
+      </button>
+    </section>
+    
+
+
+
+    <section class="bottom-container">
+      <div class="settings">
+
+        <!--Slider Setting-->
+        <!--Form pga längden på lösenordet (output) ska displayas ovanför slidern (input) -->
+        <form oninput="length.value=parseInt(slider.value)">
+          <div class="character-container">
+            <p class="text">Character Length</p>
+            <output id="length" for="slider">15</output>
+          </div>
+          
+          <input type="range" name="slider" min="1" max="15" value="15" id="slider">
+        </form>
+        
+        <!--Checkbox Setting-->
+        <label class="setting">
+          <input type="checkbox" id="uppercase" checked>Include Uppercase Letters</input>
+          <span class="checkmark"></span>
+        </label>
+
+        <label class="setting">
+          <input type="checkbox" id="lowercase" checked>Include Lowercase Letters</input>
+          <span class="checkmark"></span>
+        </label>
+
+        <label class="setting">
+          <input type="checkbox" id="number" checked>Include Numbers</input>
+          <span class="checkmark"></span>
+        </label>
+
+        <label class="setting">
+          <input type="checkbox" id="symbol" checked>Include Symbols</input>
+          <span class="checkmark"></span>
+        </label>
+      </div>
+
+      <!--Strength Bar-->
+      <div class="bottom-box">
+        <div class="strength-container">
+          <p class="text">Strength</p>
+          <div id="pw-strength">
+            
+            <p id="message">WEAK <span id="strength"></span></p>
+            <div id="strength-meter">
+              <div id="poor" class="block"></div>
+              <div id="weak" class="block"></div>
+              <div id="medium" class="block"></div>
+              <div id="strong" class="block"></div>
+            </div>
+          </div>
+        </div>
+
+        <!--Generate Bar-->
+        <button id="generate">Generate</button>
+      </div>
+    </section>
+  
+    
+
+    <img src="images/techover-logo.png" alt="Techover Logo" />
+  </body>
+  <script src="script.js"></script>
+</html>

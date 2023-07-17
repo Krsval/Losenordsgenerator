@@ -1,0 +1,237 @@
+* {
+    margin: 0px;
+}
+
+body {
+    background-color: #16111A;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    color: white;
+    gap: 30px;
+    font-family: 'Share Tech', sans-serif;
+    letter-spacing: 4px;
+}
+
+
+.result-container {
+    background-color: #2D2039;
+    width: 560px;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 30px;
+    padding: 0px 40px;
+}
+
+
+#copy {
+    border: none;
+    background-color: transparent;
+}
+
+#copy:hover {
+    cursor: pointer;
+}
+
+.bottom-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    background-color: #2D2039;
+    width: 560px;
+    height: 600px;
+    font-size: 25px;
+    padding: 40px;
+    justify-content: space-between;
+}
+
+.settings {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.character-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+#length {
+    font-size: 40px;
+    color: #A638F6;
+    align-self: flex-end;
+}
+
+#slider {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 400px;
+    height: 10px;
+    background-color: #A638F6;
+    outline: none;
+    cursor: pointer;
+  }
+
+#slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 25px;
+    height: 25px;
+    background: #ffffff;
+    border-radius: 50%;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease-in-out;
+    cursor: grab;
+}
+
+#slider::-webkit-slider-thumb:active {
+    cursor: grabbing;
+}
+
+.setting {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin-bottom: 12px;
+    padding-left: 35px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    color: #ffffff;
+}
+
+.setting input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #2D2039;
+    border: solid 1px #ffffff;
+  }
+
+.setting:hover input ~ .checkmark {
+    background-color: #453d4e;
+}
+
+.setting input:checked ~ .checkmark {
+    background-color: #A638F6;
+    border: none;
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid #000000;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    color:transparent;
+}
+
+.setting input:checked ~ .checkmark:after {
+    display: block;
+}
+
+.bottom-box {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.strength-container {
+    background-color: #A638F6;
+    display: flex;
+    height: 80px;
+    justify-content: space-between;
+    padding: 0px 40px;
+    align-items: center;
+}
+
+.strength-container .text {
+    color: #000000;
+}
+
+
+#pw-strength {
+    display: flex;
+    align-items: center;
+}
+
+#message {
+    padding-right: 15px;
+    display: none;
+}
+ 
+
+#strength-meter {
+    display: flex;
+    gap: 5px;
+}
+
+.block {
+    width: 20px;
+    height: 60px;
+    background-color: transparent;
+    border: white solid 1px;
+}
+
+#poor {
+    background-color: #ffa257;
+    border: transparent solid 1px;
+}
+
+#weak::after {
+    background-color: #ffa257;
+    border: transparent solid 1px;
+}
+
+#medium::after {
+    background-color: #ffa257;
+    border: transparent solid 1px;
+}
+
+#strong::after {
+    background-color: #ffa257;
+    border: transparent solid 1px;
+}
+
+
+
+#generate{
+    background-color: #A638F6;
+    display: flex;
+    height: 80px;
+    font-size: 30px;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    font-family: 'Share Tech', sans-serif;
+    color: #ffffff;
+    letter-spacing: 3px;
+}
+
+#generate:hover{
+    cursor: pointer;
+    background-color: #a738f6be;
+}
+
